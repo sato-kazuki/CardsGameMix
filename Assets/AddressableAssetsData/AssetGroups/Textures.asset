@@ -1,0 +1,315 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Textures
+  m_EditorClassIdentifier: 
+  m_GroupName: Textures
+  m_Data:
+    m_SerializedData: []
+  m_GUID: a7f51843fdb8eb840804932c28ca1d06
+  m_SerializeEntries:
+  - m_GUID: 33da40d27a0f60d4cb100242d7f66a7a
+    m_Address: Assets/texture/torannpu-illust1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 507850ead0f2534418d675b0f00377cd
+    m_Address: Assets/texture/torannpu-illust2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c16a93317c4e71940a4eefc15dd8a459
+    m_Address: Assets/texture/torannpu-illust3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 920d7817abcb9e84387b5697f8571623
+    m_Address: Assets/texture/torannpu-illust4.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92bcdf5cf9dd72e47b8a60e4d6e62972
+    m_Address: Assets/texture/torannpu-illust5.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: deaf7b12335245149be9ca7a1f2ddc4e
+    m_Address: Assets/texture/torannpu-illust6.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8195db764477bf46bff492586df3af7
+    m_Address: Assets/texture/torannpu-illust7.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b8c73542a2907547b4f2564b635e887
+    m_Address: Assets/texture/torannpu-illust8.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d106077a751f8be4682a5f4c935ee4f3
+    m_Address: Assets/texture/torannpu-illust9.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: edfaef5d74de6834b9770b3f584e63c1
+    m_Address: Assets/texture/torannpu-illust10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66ea19d7f40f0b946a6207b69498ac84
+    m_Address: Assets/texture/torannpu-illust11.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b5a933d9ebc040a41a4b7cdea4481d34
+    m_Address: Assets/texture/torannpu-illust12.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bef41c8018e340048b179096d607eeed
+    m_Address: Assets/texture/torannpu-illust13.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb3bf409ccc9e8f4f8e3ee8889bb62f6
+    m_Address: Assets/texture/torannpu-illust14.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 287393587f0b4824c9d4c60a359e5982
+    m_Address: Assets/texture/torannpu-illust15.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d747dd53ba25414b94c959264773812
+    m_Address: Assets/texture/torannpu-illust16.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bedd79a5580592a4096d52e5e7f95d22
+    m_Address: Assets/texture/torannpu-illust17.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 555763c94be4f204bbccb62170b0aa42
+    m_Address: Assets/texture/torannpu-illust18.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6b61d60091a1f349a98923082c9ba4c
+    m_Address: Assets/texture/torannpu-illust19.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca33339b0c4165a4ca09ca574c858081
+    m_Address: Assets/texture/torannpu-illust20.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 317c99728b59ec545b691f7efe383fbb
+    m_Address: Assets/texture/torannpu-illust21.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3462c298722dadf48ae16666230d78c1
+    m_Address: Assets/texture/torannpu-illust22.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e363321fa568b15408f8115d9ca349b1
+    m_Address: Assets/texture/torannpu-illust23.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7abbcdd39da14b741ba19d31f5245e9c
+    m_Address: Assets/texture/torannpu-illust24.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb3e17be61dc1a143bf37a8321758408
+    m_Address: Assets/texture/torannpu-illust25.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2568bcd12f5037d429e590d7e0609433
+    m_Address: Assets/texture/torannpu-illust26.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8c3b1282ab62ed4e9810b22c2451b1b
+    m_Address: Assets/texture/torannpu-illust27.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 16dd686277178fb4891fe11a7a58f8a6
+    m_Address: Assets/texture/torannpu-illust28.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d02da27f6b9e7640b6834eb33688a09
+    m_Address: Assets/texture/torannpu-illust29.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd1e9c07b053d8947a60d7230467f051
+    m_Address: Assets/texture/torannpu-illust30.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30272469932084243a8391ce523871dd
+    m_Address: Assets/texture/torannpu-illust31.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac8502e397c36704fa5a526d698edb5f
+    m_Address: Assets/texture/torannpu-illust32.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e233a8100a838244ca9a8675b34590a7
+    m_Address: Assets/texture/torannpu-illust33.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 775c33ab6b4c54e48bb3deaa6f940ca5
+    m_Address: Assets/texture/torannpu-illust34.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 08f3d1ff280bd134c968a9f299f508c1
+    m_Address: Assets/texture/torannpu-illust35.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53201da70952ce8449744f0dd578223a
+    m_Address: Assets/texture/torannpu-illust36.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b22e524e186d07240897268c3d0ed36e
+    m_Address: Assets/texture/torannpu-illust37.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e6fb4deceaaa7548bff7ad08c8006bc
+    m_Address: Assets/texture/torannpu-illust38.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7de6b4297d641b49a170e29e3c2a1ee
+    m_Address: Assets/texture/torannpu-illust39.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf0cae7a9c749484faf3c541d7eacde7
+    m_Address: Assets/texture/torannpu-illust40.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0261c2c84b09e943a3bfb1a60a92ba7
+    m_Address: Assets/texture/torannpu-illust41.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e62507b8dbe3374ebf4e5b647d60624
+    m_Address: Assets/texture/torannpu-illust42.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 720dd64949e221b4499f3da7be136d16
+    m_Address: Assets/texture/torannpu-illust43.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ac885e3c5e7c5d47b4d01947bc7d1c1
+    m_Address: Assets/texture/torannpu-illust44.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 829a9e8d54f623a43b609d963a500de3
+    m_Address: Assets/texture/torannpu-illust45.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1dbc7c1ec50e2f64480e38526051abb6
+    m_Address: Assets/texture/torannpu-illust46.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e81fdceecfa6da4c9bacba8525d1754
+    m_Address: Assets/texture/torannpu-illust47.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d766296badce1441a8f83509ebd8e53
+    m_Address: Assets/texture/torannpu-illust48.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ebb1bbd3909815448cabce5dfe9e514
+    m_Address: Assets/texture/torannpu-illust49.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fec7d495a7a7a9d4491887f99611e941
+    m_Address: Assets/texture/torannpu-illust50.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1daaa048a42149544bf6b8d6950f7d4f
+    m_Address: Assets/texture/torannpu-illust51.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: edd97ab50eb64c844ab4f5b4c4d1bac3
+    m_Address: Assets/texture/torannpu-illust52.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dab8ef15a35090d4e8c872242e822a49
+    m_Address: Assets/texture/torannpu-illust53.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea25d812e5c7fb447b0e613ab8ccf2e5
+    m_Address: Assets/texture/torannpu-illust55.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 776648a150038fb40ae6a509303f27c2
+    m_Address: Assets/texture/torannpu-illust56.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd07980cb5d8f6f4c9ee2ea82b4bf9fb
+    m_Address: Assets/texture/torannpu-illust57.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c58fac677e6e5864d837f1d8d70e7214
+    m_Address: Assets/texture/torannpu-illust58.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e38a17d3d12d7b4cb53d33e3ba0a775
+    m_Address: Assets/texture/torannpu-illust0.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 457292a81c543244f8fb5a85d26f42ea, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a8ad0936e76b6674d91b2d1b38506ac2, type: 2}
+    - {fileID: 11400000, guid: 2d3ba7bce8a991749811a77ed7647301, type: 2}

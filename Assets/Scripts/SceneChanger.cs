@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// シーンを切り替えるボタンを押したときの切り替え処理
+/// </summary>
 public class SceneChanger : MonoBehaviour
 {
-    /// <summary>
-    /// 大富豪シーンへの遷移
-    /// </summary>
     public void changeSceneJPUno()
     {
         SceneManager.LoadScene("JPUnoScene");

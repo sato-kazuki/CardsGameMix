@@ -6,6 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+    path: Assets/Scenes/TitleScene.unity
+    guid: ff202d9633bbe2743b38a321318dee79
+  - enabled: 1
+    path: Assets/Scenes/JPUnoScene.unity
+    guid: 7522c04af8a2a2d489915f33ef205a3f
+  - enabled: 1
+    path: Assets/Scenes/SolitaireScene.unity
+    guid: 67f0bc6e6a38f8d4f9fa6afebdeeafdc
+  - enabled: 1
+    path: Assets/Scenes/BlackJackScene.unity
+    guid: 01e61a999a68dad4dab3609a1c97525b
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: cbf26372688be9a48a80bee957b49e2b, type: 2}
