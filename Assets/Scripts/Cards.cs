@@ -9,32 +9,23 @@ using UnityEngine.UI;
 /// <summary>
 /// トランプ一枚ごとにAddComponentされる
 /// </summary>
-public class TranpController : MonoBehaviour
+public class Cards : MonoBehaviour
 {
     /// <summary>
     /// オブジェクトが保持しているカード番号
     ///getとsetはそれぞれメソッドを使用する
     /// </summary>
-    private int tranpNum = 0;
+    public int tranpNum { get; protected set; }
     private Image tranpImg;
 
     private const string HEADERPATH = "Assets/texture/torannpu-illust";
     private const string FOOTERPATH = ".png";
 
 
-    /// <summary>
-    /// tranpNum取得
-    /// </summary>
-    /// <returns></returns>
-    public int GetTranpNum()
-    {
-        return tranpNum;
-    }
-
     private void Start()
     {
-        GameObject child = transform.GetChild(0).gameObject;
-        tranpImg = child.GetComponent<Image>();
+        tranpNum = 0;
+        tranpImg = this.GetComponent<Image>();
     }
 
     /// <summary>
@@ -55,4 +46,5 @@ public class TranpController : MonoBehaviour
 
         tranpNum = num;
     }
+
 }

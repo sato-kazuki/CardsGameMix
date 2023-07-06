@@ -307,6 +307,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d195969b2c976d4cac1a8b70b6000d1
+    m_Address: Assets/texture/torannpu-illust54.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 457292a81c543244f8fb5a85d26f42ea, type: 2}
   m_SchemaSet:

@@ -14,6 +14,12 @@ public static class BJRuleManager
         bool isBust = 22 <= cardNum;
         return isBust;
     }
+    /// <summary>
+    /// 勝敗判定
+    /// </summary>
+    /// <param name="dealNum"></param>
+    /// <param name="playerNum"></param>
+    /// <returns></returns>
     public static bool PlayerIsWin(int dealNum,int playerNum)
     {
         bool isWin = false;
@@ -21,8 +27,8 @@ public static class BJRuleManager
         //勝敗判定　未完成
         //ディーラーとプレイヤーがBustの時は敗北 || プレイヤーのみbustは敗北(ディーラーのみbustは勝利)
         //プレイヤーよりディーラーが大きければ敗北
-        //同数なら引き分け処理（実装どうするべき？
-        //それ以外が勝利
+        //同数でないなら勝利
+        //他は引き分け処理を割り込む（スコアクラスの別メソッド
         if (21 < dealNum) {
             return isWin = true;
         }

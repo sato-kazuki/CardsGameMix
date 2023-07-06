@@ -20,4 +20,9 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("solitaireScene");
     }
+    public void changeSceneTitle()
+    {
+        SceneManager.LoadScene("TitleScene");
+        PlayerAvater.Instance.Reset();
+    }
 }
