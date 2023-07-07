@@ -8,15 +8,8 @@ using UnityEngine;
 /// </summary>
 public class PlayButton : MonoBehaviour
 {
-
-    private void Start()
-    {
-        //‰¼’u‚«
-        Deck.Shuffle();
-    }
     public void OnClickHit(){
-        int cardNum = Deck.GetCardNum();
-        Debug.Log(cardNum);
+        
     }
 
     public void OnClickStand() { 

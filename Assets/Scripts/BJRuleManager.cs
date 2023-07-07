@@ -1,50 +1,89 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public static class BJRuleManager
 {
     //ゲーム中かどうか
-    private static bool IsPlaying = true;
+    public static bool isPlaying { get; private set; } = false;
 
-    public static bool PlayerIsBust(int cardNum)
+    private const int BUSTLIMIT = 22;
+
+    /// <summary>
+    /// Bust判定
+    /// </summary>
+    /// <param name="cardNum"></param>
+    /// <returns></returns>
+    public static bool IsBust(int cardNum)
     {
         //bust
-        bool isBust = 22 <= cardNum;
+        bool isBust = BUSTLIMIT <= cardNum;
         return isBust;
     }
+
     /// <summary>
     /// 勝敗判定
     /// </summary>
     /// <param name="dealNum"></param>
     /// <param name="playerNum"></param>
     /// <returns></returns>
-    public static bool PlayerIsWin(int dealNum,int playerNum)
+    public static (bool isWin, bool isDraw)PlayerIsWin(int dealerNum,int playerNum)
     {
-        bool isWin = false;
+        bool isWin_tmp = false;
+        bool isDraw_tmp = false;
 
-        //勝敗判定　未完成
-        //ディーラーとプレイヤーがBustの時は敗北 || プレイヤーのみbustは敗北(ディーラーのみbustは勝利)
-        //プレイヤーよりディーラーが大きければ敗北
-        //同数でないなら勝利
-        //他は引き分け処理を割り込む（スコアクラスの別メソッド
-        if (21 < dealNum) {
-            return isWin = true;
-        }
-        else if(dealNum <= 21 && playerNum <= dealNum)
+        if (BUSTLIMIT <= playerNum)
         {
-            return isWin = false;
+            isWin_tmp = false;
         }
-        else
+        else if (BUSTLIMIT <= dealerNum)
         {
+            isWin_tmp = false;
         }
-        return isWin;
+        else if (playerNum == dealerNum)
+        {
+            //引き分け処理
+            isDraw_tmp = true;
+        }
+        else if (playerNum < dealerNum)
+        {
+            isWin_tmp = true;
+        }
+
+
+        return (isWin_tmp, isDraw_tmp);
     }
+
+
     public static void SetPlayingFlag(bool flag)
     {
-        IsPlaying = flag;
+        isPlaying = flag;
     }
     
+    /// <summary>
+    /// カードから記号を弾いて合計数値を取得
+    /// 0は裏面、-1はJOKER
+    /// </summary>
+    /// <param name="cardsNum"></param>
+    /// <returns></returns>
+    public static int CardSumTotal(List<int> cardsNum)
+    {
+        int total = 0; //デフォルトで裏面
+        for (int i = cardsNum.Count; 0 < i; i--)
+        {
+            if (cardsNum[i] <= 0){return 0;}
+            if (4 <= cardsNum[i] / 13 && cardsNum[i] % 13 != 0){return -1;}
 
+
+            if (cardsNum[i] % 13 == 0) {
+                total += 13;
+            }else{
+                total += cardsNum[i] % 13;
+            }
+        }
+
+        return total;
+    }
 }

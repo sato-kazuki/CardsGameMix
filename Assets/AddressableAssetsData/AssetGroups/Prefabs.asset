@@ -17,8 +17,13 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: f850b8eed0dd2ba4db9fe01639453e82
   m_SerializeEntries:
+  - m_GUID: 221b118c2236fa54299b9103e0ffbbce
+    m_Address: Assets/Prefabs/Card.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c535b356d7189c74480feb6b3f184e14
-    m_Address: Assets/Prefabs/Image.prefab
+    m_Address: Assets/Prefabs/Background01.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -55,11 +55,8 @@ public static class Deck
         {
             numberOfDecks -= 1;
             cardNum = cards[numberOfDecks];
-            return cardNum;
         }
-        else
-        {
-            return cardNum;
-        }
+        return cardNum;
     }
+
 }

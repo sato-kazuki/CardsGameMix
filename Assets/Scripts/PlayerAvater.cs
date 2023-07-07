@@ -9,14 +9,16 @@ public class PlayerAvater : SingletonBase<PlayerAvater>
     protected override bool dontDestroyOnLoad { get { return true; } }
 
     //保有カードのリスト
-    private List<GameObject> haveCards;
+    private List<int> haveCardNums;
     //保有コイン数
     private int coins;
+
+    [SerializeField] CoinUI coinUI;
 
 
     private void Start()
     {
-        haveCards = new List<GameObject>();
+        haveCardNums = new List<int>();
         coins = 0;
     }
 
@@ -25,49 +27,36 @@ public class PlayerAvater : SingletonBase<PlayerAvater>
     /// </summary>
     public void Reset()
     {
-        haveCards.Clear();
+        haveCardNums.Clear();
     }
-
 
     /// <summary>
     /// カードの追加
     /// </summary>
     /// <param name="card"></param>
-    public void setCards(GameObject card)
+    public void AddCardNum(int card)
     {
-        haveCards.Add(card);
+        haveCardNums.Add(card);
     }
 
     /// <summary>
     /// カード番号のリストを返す
     /// </summary>
     /// <returns></returns>
-    public List<int> readCards()
+    public List<int> ReadCards()
     {
-        List<int> list = new List<int>();
-
-        if(haveCards.Count > 0)
-        {
-            for (int i = 0; i < haveCards.Count; i++)
-            {
-                list.Add(haveCards[i].GetComponent<Cards>().tranpNum);
-            }
-        }
-        else
-        {
-            Debug.Log("card list undefine");
-        }
-        
-        return list;
+        return haveCardNums;
     }
 
     /// <summary>
     /// コインの獲得
     /// </summary>
     /// <param name="coins"></param>
-    public void setCoins(int coin)
+    public void GetCoins(int coin)
     {
         coins += coin;
+        coinUI.AddCoin(coins);
+
     }
 
 }

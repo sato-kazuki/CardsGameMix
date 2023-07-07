@@ -25,7 +25,7 @@ public class Cards : MonoBehaviour
     private void Start()
     {
         tranpNum = 0;
-        tranpImg = this.GetComponent<Image>();
+        tranpImg = GetComponent<Image>();
     }
 
     /// <summary>
