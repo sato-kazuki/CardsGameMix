@@ -6,6 +6,9 @@ public class BJManager : SingletonBase<BJManager>
 {
     protected override bool dontDestroyOnLoad { get { return false; } }
     int cardNum = 0;
+    public bool actFlag = false;
+    public bool hitFlag = false;
+    public bool standFlag = false;
 
     public void Start()
     {
@@ -25,7 +28,7 @@ public class BJManager : SingletonBase<BJManager>
     }
 
 
-    private void GameLoop()
+    IEnumerator GameLoop()
     {
         //ゲーム初期化
         GameReset();
@@ -39,20 +42,31 @@ public class BJManager : SingletonBase<BJManager>
 
         //HitまたはStandの2つから選択する。
         //入力待機
-
-        //Hitを選択した場合、カードを一枚追加して再度選択に戻る。数値合計が22以上の場合、Bustとして敗北扱いにし、ディーラーの行動に移る。
-        distributionCard();
-
-        //BJRuleManager.CardSumTotalでの例外処理取得を未実装(0以下の時不正状態)
-        if(BJRuleManager.IsBust(BJRuleManager.CardSumTotal(PlayerAvater.Instance.ReadCards())))
+        yield return new WaitUntil(()=>actFlag);
+        if(hitFlag)
         {
-            //bust処理
+            hitFlag = false;
+            //Hitを選択した場合、カードを一枚追加して再度選択に戻る。数値合計が22以上の場合、Bustとして敗北扱いにし、ディーラーの行動に移る。
+            distributionCard();
 
-            //ディーラーの行動に移る
+            //BJRuleManager.CardSumTotalでの例外処理取得を未実装(0以下の時不正状態)
+            if (BJRuleManager.IsBust(BJRuleManager.CardSumTotal(PlayerAvater.Instance.ReadCards())))
+            {
+                //bust処理
+
+                //ディーラーの行動に移る
+            }
+        }
+        else if(standFlag)
+        {
+            standFlag = false;
+            //Standを選択した場合、即ディーラーの行動に移る。
         }
 
 
-        //Standを選択した場合、即ディーラーの行動に移る。
+
+
+
 
 
         //ディーラーがカードを引く。17以上になるまで引き続ける。22以上の場合、Bustとして敗北扱いにし、勝敗判定に移る。

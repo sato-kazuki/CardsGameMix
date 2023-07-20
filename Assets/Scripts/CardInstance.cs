@@ -45,6 +45,9 @@ public class CardInstance : SingletonBase<CardInstance>
             gameObjects.Add(cardObject);
         }
     }
+    /// <summary>
+    /// ƒJ[ƒh‚Ìœ‹
+    /// </summary>
     public void RemoveCards()
     {
         gameObjects.Clear();
