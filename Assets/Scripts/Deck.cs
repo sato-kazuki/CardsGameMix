@@ -42,6 +42,7 @@ public static class Deck
             cards[k] = cards[n];
             cards[n] = tmp;
         }
+        Debug.Log("shuffle end");
     }
 
     /// <summary>

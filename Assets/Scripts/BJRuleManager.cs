@@ -1,3 +1,4 @@
+using System;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
@@ -56,10 +57,31 @@ public static class BJRuleManager
         return (isWin_tmp, isDraw_tmp);
     }
 
+    /// <summary>
+    /// カードの点数計算
+    /// </summary>
+    /// <param name="flag"></param>
+    public static int PointSum(List<int> ints)
+    {
+        int sum = 0;
+        ints.Sort();
+
+        foreach (int i in ints)
+        {        
+            if(21 < sum + i && 10 < i)
+            {
+                sum = i - 10;
+            }
+            else { sum += i; }
+        }
+
+        return sum;
+    }
 
     public static void SetPlayingFlag(bool flag)
     {
         isPlaying = flag;
+        Debug.Log("playflagset");
     }
     
     /// <summary>
@@ -70,19 +92,25 @@ public static class BJRuleManager
     /// <returns></returns>
     public static int CardSumTotal(List<int> cardsNum)
     {
-        int total = 0; //デフォルトで裏面
+        List<int> Num = new List<int>(); ; //デフォルトで裏面
+        int total = 0;
+
         for (int i = cardsNum.Count; 0 < i; i--)
         {
-            if (cardsNum[i] <= 0){return 0;}
-            if (4 <= cardsNum[i] / 13 && cardsNum[i] % 13 != 0){return -1;}
+            if (cardsNum[i] <= 0){
+                //return 0;
+            }
+            else if (4 <= cardsNum[i] / 13 && cardsNum[i] % 13 != 0){
+                //return -1;
+            }
 
-
-            if (cardsNum[i] % 13 == 0) {
-                total += 13;
+            else if (cardsNum[i] % 13 == 0) {
+                Num.Add(13);
             }else{
-                total += cardsNum[i] % 13;
+                Num.Add(cardsNum[i] % 13);
             }
         }
+        total = PointSum(Num);
 
         return total;
     }

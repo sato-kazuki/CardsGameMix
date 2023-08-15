@@ -14,7 +14,7 @@ public class SceneChanger : MonoBehaviour
     }
     public void changeSceneBlackJack()
     {
-        SceneManager.LoadScene("BlackJackScene");
+        SceneManager.LoadScene("BlackJack");
     }
     public void changeScenesolitaire()
     {

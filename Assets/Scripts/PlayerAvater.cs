@@ -36,6 +36,7 @@ public class PlayerAvater : SingletonBase<PlayerAvater>
     /// <param name="card"></param>
     public void AddCardNum(int card)
     {
+        Debug.Log("Add" + card);
         haveCardNums.Add(card);
     }
 
@@ -55,7 +56,7 @@ public class PlayerAvater : SingletonBase<PlayerAvater>
     public void GetCoins(int coin)
     {
         coins += coin;
-        coinUI.AddCoin(coins);
+        coinUI.WriteCoin(coins);
 
     }
 

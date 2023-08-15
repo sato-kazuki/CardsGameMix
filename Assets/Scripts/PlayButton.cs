@@ -9,10 +9,13 @@ using UnityEngine;
 public class PlayButton : MonoBehaviour
 {
     public void OnClickHit(){
-        
+        //BJManager.Instance.hitFlag = true;
+        MainThread.HitAction();
     }
 
     public void OnClickStand() { 
-        
+        //BJManager.Instance.standFlag = true;
+        MainThread.StandAction();
+     
     }
 }

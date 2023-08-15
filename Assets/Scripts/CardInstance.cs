@@ -6,11 +6,6 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 
 
-public class  enmu
-{
-    string player;
-    string dealer;
-}
 public class CardInstance : SingletonBase<CardInstance>
 {
     protected override bool dontDestroyOnLoad { get { return false; } }

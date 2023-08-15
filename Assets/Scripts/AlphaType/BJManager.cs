@@ -6,14 +6,12 @@ public class BJManager : SingletonBase<BJManager>
 {
     protected override bool dontDestroyOnLoad { get { return false; } }
     int cardNum = 0;
-    public bool actFlag = false;
     public bool hitFlag = false;
     public bool standFlag = false;
 
     public void Start()
     {
-        GameReset();
-
+        GameLoop();
     }
 
     //ゲーム初期化
@@ -28,7 +26,7 @@ public class BJManager : SingletonBase<BJManager>
     }
 
 
-    IEnumerator GameLoop()
+    public void GameLoop()
     {
         //ゲーム初期化
         GameReset();
@@ -42,28 +40,11 @@ public class BJManager : SingletonBase<BJManager>
 
         //HitまたはStandの2つから選択する。
         //入力待機
-        yield return new WaitUntil(()=>actFlag);
-        if(hitFlag)
-        {
-            hitFlag = false;
-            //Hitを選択した場合、カードを一枚追加して再度選択に戻る。数値合計が22以上の場合、Bustとして敗北扱いにし、ディーラーの行動に移る。
-            distributionCard();
-
-            //BJRuleManager.CardSumTotalでの例外処理取得を未実装(0以下の時不正状態)
-            if (BJRuleManager.IsBust(BJRuleManager.CardSumTotal(PlayerAvater.Instance.ReadCards())))
-            {
-                //bust処理
-
-                //ディーラーの行動に移る
-            }
-        }
-        else if(standFlag)
-        {
-            standFlag = false;
-            //Standを選択した場合、即ディーラーの行動に移る。
-        }
+        Debug.Log("waiting");
 
 
+
+        Debug.Log("waited");
 
 
 
@@ -113,9 +94,51 @@ public class BJManager : SingletonBase<BJManager>
 
         //ゲームの継続を選択する。継続する場合はベット額の選択に戻り、継続しない場合はタイトルに戻る。
 
-
+        Debug.Log("GameEnd");
     }
 
+
+    /// <summary>
+    /// 入力待機
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator InputWaiting()
+    {
+        while (true)
+        {
+            yield return new WaitUntil(() => hitFlag || standFlag);
+
+            if (hitFlag)
+            {
+                Debug.Log("hitbutton");
+                hitFlag = false;
+                //Hitを選択した場合、カードを一枚追加して再度選択に戻る。数値合計が22以上の場合、Bustとして敗北扱いにし、ディーラーの行動に移る。
+                distributionCard();
+
+                //BJRuleManager.CardSumTotalでの例外処理取得を未実装(0以下の時不正状態)
+                if (BJRuleManager.IsBust(BJRuleManager.CardSumTotal(PlayerAvater.Instance.ReadCards())))
+                {
+                    //bust処理
+
+                    //ディーラーの行動に移る
+                    break;
+                }
+            }
+            else if (standFlag)
+            {
+                Debug.Log("standbutton");
+                standFlag = false;
+                //Standを選択した場合、即ディーラーの行動に移る。
+                break;
+            }
+            Debug.Log("one game end");
+        }
+    }
+
+
+    /// <summary>
+    /// カードの分配
+    /// </summary>
     private void distributionCard()
     {
         do
@@ -127,3 +150,33 @@ public class BJManager : SingletonBase<BJManager>
         PlayerAvater.Instance.AddCardNum(cardNum);
     }
 }
+
+
+
+//隔離
+//ボタン入力待機
+
+//yield return new WaitUntil(() => hitFlag || standFlag);
+//if (hitFlag)
+//{
+//    Debug.Log("hitbutton");
+//    hitFlag = false;
+//    //Hitを選択した場合、カードを一枚追加して再度選択に戻る。数値合計が22以上の場合、Bustとして敗北扱いにし、ディーラーの行動に移る。
+//    distributionCard();
+
+//    //BJRuleManager.CardSumTotalでの例外処理取得を未実装(0以下の時不正状態)
+//    if (BJRuleManager.IsBust(BJRuleManager.CardSumTotal(PlayerAvater.Instance.ReadCards())))
+//    {
+//        //bust処理
+
+//        //ディーラーの行動に移る
+//        yield break;
+//    }
+//}
+//else if (standFlag)
+//{
+//    Debug.Log("standbutton");
+//    standFlag = false;
+//    //Standを選択した場合、即ディーラーの行動に移る。
+//    yield break;
+//}

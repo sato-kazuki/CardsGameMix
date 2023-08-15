@@ -7,14 +7,11 @@ using TMPro;
 public class CoinUI : MonoBehaviour
 {
     [SerializeField] Image coinIcon;
-    [SerializeField] TextMeshProUGUI coinNum;
-
-    private int haveCoins = 0;
+    [SerializeField] TextMeshProUGUI coinText;
 
     //テキスト変更メソッド
-    public void AddCoin(int addNum)
+    public void WriteCoin(int coinNum)
     {
-        haveCoins += addNum;
-        coinNum.text = haveCoins.ToString();
+        coinText.text = coinNum.ToString();
     }
 }
