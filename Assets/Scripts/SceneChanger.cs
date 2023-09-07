@@ -23,6 +23,6 @@ public class SceneChanger : MonoBehaviour
     public void changeSceneTitle()
     {
         SceneManager.LoadScene("TitleScene");
-        PlayerAvater.Instance.Reset();
+        PlayerAvater.Instance.ResetIns();
     }
 }

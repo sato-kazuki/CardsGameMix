@@ -24,7 +24,7 @@ public class PanelButton : MonoBehaviour
     {
         Debug.Log("Button_yes_" + dropdown.captionText.text);
         
-        MainThread.GameStart(int.Parse(dropdown.captionText.text) * -1);
+        BJMainThread.BlackJackGameStart(int.Parse(dropdown.captionText.text) * -1);
         betPanel.SetActive(false);
     }
     public void OnButtonNo()

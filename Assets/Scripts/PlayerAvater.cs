@@ -25,7 +25,7 @@ public class PlayerAvater : SingletonBase<PlayerAvater>
     /// <summary>
     /// ‰Šú‰»ƒƒ\ƒbƒh
     /// </summary>
-    public void Reset()
+    public void ResetIns()
     {
         haveCardNums.Clear();
     }

@@ -5,18 +5,42 @@ using UnityEngine;
 public class Dealer : SingletonBase<Dealer>
 {
     protected override bool dontDestroyOnLoad { get { return false; } }
-    //仮置きの数値リスト
-    private List<int> haveCardNums;
-    //ディーラーアニメーションのコントロール
 
-    //playerAvatar同様の処理を追加
+        //保有カードのリスト
+        private List<int> haveCardNums;
 
-    public void AddCardNum(int cardNum)
-    {
 
-    }
-    public List<int> ReadCards()
-    {
-        return haveCardNums;
-    }
+        private void Start()
+        {
+            haveCardNums = new List<int>();
+        }
+
+        /// <summary>
+        /// 初期化メソッド
+        /// </summary>
+        public void ResetIns()
+        {
+            haveCardNums.Clear();
+        }
+
+        /// <summary>
+        /// カードの追加
+        /// </summary>
+        /// <param name="card"></param>
+        public void AddCardNum(int card)
+        {
+            Debug.Log("Add" + card);
+            haveCardNums.Add(card);
+        }
+
+        /// <summary>
+        /// カード番号のリストを返す
+        /// </summary>
+        /// <returns></returns>
+        public List<int> ReadCards()
+        {
+            return haveCardNums;
+        }
+
+
 }

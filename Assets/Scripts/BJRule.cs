@@ -5,12 +5,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public static class BJRuleManager
+public static class BJRule
 {
     //ゲーム中かどうか
     public static bool isPlaying { get; private set; } = false;
 
     private const int BUSTLIMIT = 22;
+
+    public static void SetPlayingFlag(bool flag)
+    {
+        isPlaying = flag;
+        Debug.Log("playflagset");
+    }
 
     /// <summary>
     /// Bust判定
@@ -61,7 +67,7 @@ public static class BJRuleManager
     /// カードの点数計算
     /// </summary>
     /// <param name="flag"></param>
-    public static int PointSum(List<int> ints)
+    private static int PointSum(List<int> ints)
     {
         int sum = 0;
         ints.Sort();
@@ -78,11 +84,7 @@ public static class BJRuleManager
         return sum;
     }
 
-    public static void SetPlayingFlag(bool flag)
-    {
-        isPlaying = flag;
-        Debug.Log("playflagset");
-    }
+
     
     /// <summary>
     /// カードから記号を弾いて合計数値を取得
@@ -95,13 +97,15 @@ public static class BJRuleManager
         List<int> Num = new List<int>(); ; //デフォルトで裏面
         int total = 0;
 
-        for (int i = cardsNum.Count; 0 < i; i--)
+        for (int i = cardsNum.Count - 1; 0 < i; i--)
         {
             if (cardsNum[i] <= 0){
+                Debug.Log("return 0");
                 //return 0;
             }
             else if (4 <= cardsNum[i] / 13 && cardsNum[i] % 13 != 0){
                 //return -1;
+                Debug.Log("return -1");
             }
 
             else if (cardsNum[i] % 13 == 0) {

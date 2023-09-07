@@ -17,12 +17,12 @@ public class BJManager : SingletonBase<BJManager>
     //ゲーム初期化
     private void GameReset()
     {
-        BJRuleManager.SetPlayingFlag(true);
+        BJRule.SetPlayingFlag(true);
         Deck.Shuffle();
     }
     private void GameEnd()
     {
-        BJRuleManager.SetPlayingFlag(false);
+        BJRule.SetPlayingFlag(false);
     }
 
 
@@ -63,9 +63,9 @@ public class BJManager : SingletonBase<BJManager>
 
             //ディーラークラスでカードの数値を保持する必要がある(未実装
             Dealer.Instance.AddCardNum(dCardNum);
-        } while (BJRuleManager.CardSumTotal(Dealer.Instance.ReadCards()) < 17);
+        } while (BJRule.CardSumTotal(Dealer.Instance.ReadCards()) < 17);
 
-        if (BJRuleManager.IsBust(BJRuleManager.CardSumTotal(Dealer.Instance.ReadCards())))
+        if (BJRule.IsBust(BJRule.CardSumTotal(Dealer.Instance.ReadCards())))
         {
             //Bustとして次へ
         }
@@ -74,13 +74,13 @@ public class BJManager : SingletonBase<BJManager>
 
         //プレイヤーとディーラーの数値合計を比較し、勝敗判定を行う。
         //引き分けの場合、ベットしたコインを払い戻す。勝利した場合はベット額の倍額を所持コインに加算する。
-        if (BJRuleManager.PlayerIsWin(0, BJRuleManager.CardSumTotal(PlayerAvater.Instance.ReadCards())).isWin)
+        if (BJRule.PlayerIsWin(0, BJRule.CardSumTotal(PlayerAvater.Instance.ReadCards())).isWin)
         {
             //勝利時処理
             PlayerAvater.Instance.GetCoins(bets*2);
 
         }
-        else if(!BJRuleManager.PlayerIsWin(0, BJRuleManager.CardSumTotal(PlayerAvater.Instance.ReadCards())).isWin)
+        else if(!BJRule.PlayerIsWin(0, BJRule.CardSumTotal(PlayerAvater.Instance.ReadCards())).isWin)
         {
             //引き分け時処理(コイン払い戻し
             PlayerAvater.Instance.GetCoins(bets);
@@ -116,7 +116,7 @@ public class BJManager : SingletonBase<BJManager>
                 distributionCard();
 
                 //BJRuleManager.CardSumTotalでの例外処理取得を未実装(0以下の時不正状態)
-                if (BJRuleManager.IsBust(BJRuleManager.CardSumTotal(PlayerAvater.Instance.ReadCards())))
+                if (BJRule.IsBust(BJRule.CardSumTotal(PlayerAvater.Instance.ReadCards())))
                 {
                     //bust処理
 

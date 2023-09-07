@@ -3,22 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-static class MainThread
+static class BJMainThread
 {
     
 
     public static void Initialization()
     {
         Deck.Shuffle();
-        PlayerAvater.Instance.Reset();
+        PlayerAvater.Instance.ResetIns();
     }
 
-    public static void GameStart(int betCoin) {
+    public static void BlackJackGameStart(int betCoin) {
         PlayerAvater.Instance.GetCoins(betCoin);
         Deck.Shuffle();
-        BJRuleManager.SetPlayingFlag(true);
+        BJRule.SetPlayingFlag(true);
         PlayerAvater.Instance.AddCardNum(Deck.GetCardNum());
         Debug.Log("dealer_card_" + Deck.GetCardNum().ToString());
+
+        if (BJRule.IsBust(BJRule.CardSumTotal(PlayerAvater.Instance.ReadCards()))){
+            StandAction();
+        }
     
     }
 
@@ -30,5 +34,16 @@ static class MainThread
     public static void StandAction()
     {
         Debug.Log("Stand");
+        dealerTurnPhase();
+        judgePhase();
+    }
+
+    private static void dealerTurnPhase()
+    {
+        //ŽŸ‚±‚±‚©‚ç
+    }
+    private static void judgePhase()
+    {
+
     }
 }
